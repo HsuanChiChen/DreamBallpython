@@ -52,6 +52,41 @@
       padding: 15px;
       margin-top: 20px;
     }
+    /* 商品卡片樣式 */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+    .product-card p {
+      margin: 5px 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      color: #e60023;
+      font-weight: bold;
+      margin: 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -70,7 +105,32 @@
   <div class="container" id="products">
     <h2>🐍 商品介紹</h2>
     <p>我們提供多種健康、精選的寵物蛇，包含多種基因變異（Morph），品質嚴格把關，適合新手及專業飼主。</p>
+
+    <!-- 商品展示區 -->
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=球蟒A" alt="商品1">
+        <h3>球蟒 Albino</h3>
+        <p>明亮黃色與白色斑紋，適合新手飼主。</p>
+        <p class="price">NT$ 6,800</p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=球蟒B" alt="商品2">
+        <h3>球蟒 Pied</h3>
+        <p>身體部分白化，搭配深色花紋，極具特色。</p>
+        <p class="price">NT$ 12,000</p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/400x200.png?text=球蟒C" alt="商品3">
+        <h3>球蟒 Pastel</h3>
+        <p>鮮艷對比度高的顏色，深受飼主喜愛。</p>
+        <p class="price">NT$ 5,500</p>
+      </div>
+    </div>
   </div>
+
   <div class="container" id="payment">
     <h2>💰 付款方式</h2>
     <p>目前僅提供 <strong>帳號匯款</strong>，下單後請與我們確認金額與帳號資訊。</p>
@@ -96,9 +156,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
